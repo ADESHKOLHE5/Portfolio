@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-slate-200 font-body antialiased;
+}
+
+::selection {
+  @apply bg-accent/30 text-white;
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.25em] uppercase text-accent-soft;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-16;
+  }
+
+  .info-card {
+    @apply rounded-2xl border border-white/5 bg-ink-800/60 p-5 backdrop-blur-sm transition-colors hover:border-accent/30;
+  }
+
+  .pill-btn {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply text-sm text-slate-300 transition-colors hover:text-white;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
+  }
+}
